@@ -3,7 +3,7 @@ import { CATEGORIES, LOW_STOCK_THRESHOLD, money, stockStatus, useStore, type Pro
 import { ProductImage } from "./ProductImage";
 
 type Draft = { name: string; description: string; category: string; price: string; stock: string; image: string };
-const blank: Draft = { name: "", description: "", category: CATEGORIES[0], price: "", stock: "", image: "" };
+const blank: Draft = { name: "", description: "", category: CATEGORIES[0] ?? "Home", price: "", stock: "", image: "" };
 
 function validate(d: Draft) {
   const e: Partial<Record<keyof Draft, string>> = {};
